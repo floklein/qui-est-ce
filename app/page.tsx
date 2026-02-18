@@ -75,7 +75,7 @@ export default function Home() {
       </main>
 
       {/* Bottom bar */}
-      <footer className="flex items-center justify-between px-4 pb-4">
+      <footer className="flex items-center justify-between px-4 py-4">
         <ScoreCounter
           score={score}
           onIncrement={() => setScore((s) => s + 1)}
