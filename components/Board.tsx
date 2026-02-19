@@ -8,7 +8,7 @@ interface BoardProps {
 
 export default function Board({ names, eliminated, onToggle }: BoardProps) {
   return (
-    <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6">
+    <div className="grid h-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6">
       {names.map((name, i) => (
         <CharacterCard
           key={i}

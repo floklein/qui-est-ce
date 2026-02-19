@@ -45,7 +45,7 @@ export default function CharacterCard({
     <button
       onClick={onToggle}
       aria-pressed={isEliminated}
-      className="h-[76px] w-full cursor-pointer sm:h-28"
+      className="w-full cursor-pointer"
       style={{ perspective: "800px" }}
     >
       <div className={`card-inner ${isEliminated ? "flipped" : ""}`}>
