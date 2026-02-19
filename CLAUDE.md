@@ -26,3 +26,5 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Path alias: `@/*` maps to the project root
 - ESLint uses flat config (`eslint.config.mjs`) with `next/core-web-vitals` and `next/typescript` presets
 - CSS custom properties for theming (`--background`, `--foreground`) with dark mode via `prefers-color-scheme`
+- Character sets defined in `config/characters.ts` — each set has a name and 24 characters
+- Game components live in `components/` (Board, MysteryCard, ScoreCounter, ThemeSwitch)
