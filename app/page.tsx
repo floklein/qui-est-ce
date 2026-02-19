@@ -27,7 +27,9 @@ export default function Home() {
   const [mysteryIndex, setMysteryIndex] = useState(0);
   const [score, setScore] = useState(0);
 
-  const characters = CHARACTER_SETS[setIndex].characters;
+  const characters = [...CHARACTER_SETS[setIndex].characters].sort((a, b) =>
+    a.localeCompare(b, "fr"),
+  );
 
   const toggleTheme = useCallback(() => {
     setTheme((t) => (t === "red" ? "blue" : "red"));
