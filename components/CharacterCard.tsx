@@ -26,14 +26,14 @@ export default function CharacterCard({
       style={{ perspective: "800px" }}
     >
       <div className={`card-inner ${isEliminated ? "flipped" : ""}`}>
-        <div className="card-face bg-theme-card text-theme-card-text border-theme-accent flex-col gap-0.5 border-2 px-2 shadow-md sm:gap-1">
+        <div className="card-face bg-theme-card text-theme-card-text border-theme-primary/20 flex-col gap-0.5 border px-2 shadow-sm sm:gap-1">
           <span
-            className="text-xl font-bold leading-none sm:text-3xl"
+            className="text-2xl font-bold leading-none sm:text-4xl"
             style={{ color }}
           >
             {firstLetter}
           </span>
-          <span className="text-sm font-semibold sm:text-base">{name}</span>
+          <span className="text-base font-medium sm:text-lg">{name}</span>
         </div>
         <div className="card-back bg-theme-card-back flex items-center justify-center text-2xl text-white opacity-80">
           ✕
