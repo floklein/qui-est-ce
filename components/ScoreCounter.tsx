@@ -21,7 +21,7 @@ export default function ScoreCounter({
         size="icon"
         onClick={onDecrement}
         disabled={score === 0}
-        className="h-9 w-9 cursor-pointer rounded-full bg-transparent text-lg font-bold text-theme-accent shadow-none hover:bg-transparent hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-40"
+        className="h-9 w-9 cursor-pointer rounded-full bg-transparent text-lg font-bold text-theme-primary shadow-none hover:bg-transparent hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-40"
         aria-label="Diminuer le score"
       >
         −
@@ -32,7 +32,7 @@ export default function ScoreCounter({
       <Button
         size="icon"
         onClick={onIncrement}
-        className="h-9 w-9 cursor-pointer rounded-full bg-transparent text-lg font-bold text-theme-accent shadow-none hover:bg-transparent hover:opacity-80"
+        className="h-9 w-9 cursor-pointer rounded-full bg-transparent text-lg font-bold text-theme-primary shadow-none hover:bg-transparent hover:opacity-80"
         aria-label="Augmenter le score"
       >
         +

@@ -13,14 +13,14 @@ export default function MysteryCard({ name, onRefresh }: MysteryCardProps) {
         Personnage mystère
       </span>
       <div className="flex items-center gap-2">
-      <span className="bg-theme-card text-theme-card-text rounded-lg border border-theme-accent/30 px-4 py-1.5 text-lg font-bold shadow-sm">{name}</span>
+      <span className="bg-theme-card text-theme-card-text rounded-lg border border-theme-primary/30 px-4 py-1.5 text-lg font-bold shadow-sm">{name}</span>
       <Button
         size="icon"
         onClick={onRefresh}
-        className="h-8 w-8 cursor-pointer rounded-full bg-theme-accent text-white shadow-none hover:bg-theme-accent hover:opacity-80"
+        className="h-8 w-8 cursor-pointer rounded-full bg-transparent text-theme-primary shadow-none hover:bg-transparent hover:opacity-80"
         aria-label="Changer"
       >
-        <RefreshCw size={16} />
+        <RefreshCw size={24} strokeWidth={3} />
       </Button>
       </div>
     </div>
