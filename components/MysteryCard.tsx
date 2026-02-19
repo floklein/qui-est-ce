@@ -13,7 +13,7 @@ export default function MysteryCard({ name, onRefresh }: MysteryCardProps) {
         Personnage mystère
       </span>
       <div className="flex items-center gap-2">
-      <span className="text-theme-card-text text-lg font-bold">{name}</span>
+      <span className="bg-theme-card text-theme-card-text rounded-lg border border-theme-accent/30 px-4 py-1.5 text-lg font-bold shadow-sm">{name}</span>
       <Button
         size="icon"
         onClick={onRefresh}
