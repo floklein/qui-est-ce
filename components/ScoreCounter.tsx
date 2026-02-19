@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 interface ScoreCounterProps {
   score: number;
   onIncrement: () => void;
@@ -15,24 +17,26 @@ export default function ScoreCounter({
         Score
       </span>
       <div className="flex items-center gap-3">
-      <button
+      <Button
+        size="icon"
         onClick={onDecrement}
         disabled={score === 0}
-        className="bg-theme-accent flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-lg font-bold text-white transition-opacity hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-40"
+        className="h-9 w-9 cursor-pointer rounded-full bg-theme-accent text-lg font-bold text-white shadow-none hover:bg-theme-accent hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-40"
         aria-label="Diminuer le score"
       >
         −
-      </button>
+      </Button>
       <span className="text-theme-card-text w-10 text-center text-2xl font-bold">
         {score}
       </span>
-      <button
+      <Button
+        size="icon"
         onClick={onIncrement}
-        className="bg-theme-accent flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-lg font-bold text-white transition-opacity hover:opacity-80"
+        className="h-9 w-9 cursor-pointer rounded-full bg-theme-accent text-lg font-bold text-white shadow-none hover:bg-theme-accent hover:opacity-80"
         aria-label="Augmenter le score"
       >
         +
-      </button>
+      </Button>
       </div>
     </div>
   );

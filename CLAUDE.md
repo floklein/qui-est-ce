@@ -18,6 +18,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **React 19** with Server Components by default
 - **TypeScript** (strict mode)
 - **Tailwind CSS v4** via `@tailwindcss/postcss` plugin — uses `@import "tailwindcss"` and `@theme inline` syntax in `app/globals.css`
+- **shadcn/ui** (New York style) — Button and Select components in `components/ui/`, configured via `components.json`
 - **Geist** font family loaded via `next/font/google`
 
 ## Architecture
@@ -28,3 +29,4 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - CSS custom properties for theming (`--background`, `--foreground`) with dark mode via `prefers-color-scheme`
 - Character sets defined in `config/characters.ts` — each set has a name and 24 characters
 - Game components live in `components/` (Board, MysteryCard, ScoreCounter, ThemeSwitch)
+- shadcn/ui primitives live in `components/ui/` (Button, Select) with `lib/utils.ts` providing the `cn()` helper

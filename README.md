@@ -1,6 +1,6 @@
 # Qui est-ce ?
 
-A digital version of the classic "Guess Who?" board game, built with Next.js 16, React 19, TypeScript, and Tailwind CSS v4.
+A digital version of the classic "Guess Who?" board game, built with Next.js 16, React 19, TypeScript, Tailwind CSS v4, and shadcn/ui.
 
 ## Features
 

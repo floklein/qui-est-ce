@@ -1,4 +1,5 @@
 import { RefreshCw } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface MysteryCardProps {
   name: string;
@@ -13,13 +14,14 @@ export default function MysteryCard({ name, onRefresh }: MysteryCardProps) {
       </span>
       <div className="flex items-center gap-2">
       <span className="text-theme-card-text text-lg font-bold">{name}</span>
-      <button
+      <Button
+        size="icon"
         onClick={onRefresh}
-        className="bg-theme-accent flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-white transition-opacity hover:opacity-80"
+        className="h-8 w-8 cursor-pointer rounded-full bg-theme-accent text-white shadow-none hover:bg-theme-accent hover:opacity-80"
         aria-label="Changer"
       >
         <RefreshCw size={16} />
-      </button>
+      </Button>
       </div>
     </div>
   );

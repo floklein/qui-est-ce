@@ -7,6 +7,14 @@ import Board from "@/components/Board";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import MysteryCard from "@/components/MysteryCard";
 import ScoreCounter from "@/components/ScoreCounter";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 function randomIndex(length: number) {
   return Math.floor(Math.random() * length);
@@ -62,26 +70,31 @@ export default function Home() {
         <h1 className="text-theme-header hidden text-2xl font-bold sm:block sm:text-3xl">
           Qui est-ce ?
         </h1>
-        <select
-          value={setIndex}
-          onChange={(e) => changeSet(Number(e.target.value))}
-          className="bg-theme-primary cursor-pointer rounded-full px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-80"
+        <Select
+          value={String(setIndex)}
+          onValueChange={(val) => changeSet(Number(val))}
         >
-          {CHARACTER_SETS.map((set, i) => (
-            <option key={set.name} value={i}>
-              {set.name}
-            </option>
-          ))}
-        </select>
+          <SelectTrigger className="bg-theme-primary cursor-pointer rounded-full border-none px-4 py-2 text-sm font-semibold text-white shadow-none focus-visible:ring-0 [&_svg]:text-white">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {CHARACTER_SETS.map((set, i) => (
+              <SelectItem key={set.name} value={String(i)}>
+                {set.name}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
         <div className="flex items-center gap-3">
           <ThemeSwitch theme={theme} onToggle={toggleTheme} />
-          <button
+          <Button
+            size="icon"
             onClick={reset}
-            className="bg-theme-primary cursor-pointer rounded-full px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-80"
+            className="h-9 w-9 bg-theme-primary cursor-pointer text-white shadow-none hover:bg-theme-primary hover:opacity-80 sm:w-auto sm:px-4"
           >
-            <RotateCcw size={18} className="inline sm:hidden" />
-            <span className="hidden sm:inline">Recommencer</span>
-          </button>
+            <RotateCcw size={18} className="sm:hidden" />
+            <span className="hidden text-sm font-semibold sm:inline">Recommencer</span>
+          </Button>
         </div>
       </header>
 
